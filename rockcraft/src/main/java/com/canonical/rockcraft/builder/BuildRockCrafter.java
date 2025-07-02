@@ -194,6 +194,7 @@ public class BuildRockCrafter extends AbstractRockCrafter {
         commands.append("cp -r * ${CRAFT_PART_INSTALL}/var/lib/pebble/default/.m2/repository/\n");
         commands.append("# workaround https://github.com/canonical/craft-parts/issues/507\n");
         commands.append("chown -R 584792:584792  ${CRAFT_PART_INSTALL}/var/lib/pebble/default\n");
+        commands.append("chmod -R 777 ${CRAFT_PART_INSTALL}/var/lib/pebble/default/.m2/repository/\n");
         commands.append("craftctl default");
         part.put("override-build", commands.toString());
 
