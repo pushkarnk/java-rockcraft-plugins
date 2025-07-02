@@ -163,8 +163,8 @@ public class BuildRockCrafter extends AbstractRockCrafter {
         if (settings.getBuildSystem() == BuildSystem.maven) {
             part.put("stage-packages", new String[] {"maven"});
             part.put("stage", new String[]{
-                    "usr/share/maven",
-                    "usr/share/java",
+                    "usr/share/maven/**/*",
+                    "usr/share/java/**/*",
             });
         }
         else if (settings.getBuildSystem() == BuildSystem.gradle) {

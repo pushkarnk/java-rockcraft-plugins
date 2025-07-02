@@ -9,4 +9,4 @@ else
   GOAL=$@
 fi
 export HOME=/var/lib/pebble/default
-(cd $WORKDIR && mvn $GOAL)
+(cd $WORKDIR && /usr/share/maven/bin/mvn $GOAL)
